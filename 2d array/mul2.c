@@ -2,8 +2,9 @@
 void inputmatrix(int arr[100][100],int r,int c);
 void outputmatrix(int arr[100][100],int r,int c);
 void multiplymatrix(int arr1[100][100],int arr2[100][100],int arr3[100][100],int r,int c,int r1,int c1);
+void summatrix(int arr1[100][100],int arr2[100][100],int arr3[100][100],int r,int c);
 void main(){
-    int r,c,r1,c1,arr1[100][100],arr2[100][100],arr3[100][100];
+    int n,r,c,r1,c1,arr1[100][100],arr2[100][100],arr3[100][100];
     printf("enter the row and column for first row\n");
     scanf("%d%d",&r,&c);
     printf("enter the row and column for second row\n");
@@ -16,8 +17,26 @@ void main(){
      outputmatrix(arr1,r,c);
      printf("second matrix\n");
     outputmatrix(arr2,r1,c1);
-    printf("multiplication\n");
+    printf("enter choice\n1.multiplication matrix\n2.sum matrix\n");
+    scanf("%d",&n);
+    switch (n)
+    {
+     case 1:
+        printf("multiplication\n");
     multiplymatrix(arr1,arr2,arr3,r,c,r1,c1);
+        break;
+     
+     case 2:
+      printf("sum is\n");
+     summatrix(arr1,arr2,arr3,r,c);
+     break;
+    
+    default:
+    printf("enter valid choice");
+        
+    }
+    
+    
 }
 void inputmatrix(int arr[100][100],int r,int c)
 {   int i,j;
@@ -59,3 +78,18 @@ int i,j,k;
            printf("\n");
           }
       }
+
+      void summatrix(int arr1[100][100],int arr2[100][100],int arr3[100][100],int r,int c)
+      {
+
+       int i,j;
+    for ( i = 0; i < r; i++)
+    {
+        for ( j = 0; j < c; j++)
+        {
+            arr3[i][j]=arr1[i][j]+arr2[i][j];
+             printf("%d\t",arr3[i][j]);
+        }
+        printf("\n");
+    }
+    }
