@@ -46,9 +46,9 @@ void main(){
     void transposematrix(int arr[100][100],int r,int c)
     {
          int i,j;
-        for (i = 0; i < r; i++)
+        for (i = 0; i < c; i++)
         {
-            for ( j = 0; j < c; j++)
+            for ( j = 0; j < r; j++)
             {
                 printf("%d\t",arr[j][i]);   
             }  
