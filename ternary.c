@@ -2,7 +2,7 @@
 
 int main()
 {
-    int a, b, c, x, d, p;
+   int a, b, c, x, d, p;
     printf("enter the number\n");
     scanf("%d%d%d%d", &a, &b, &c, &d);
     p = (a < b && a < c && a < d) ? a : ((b < c && b < d) ? b : (c < d ? c : d));
@@ -18,5 +18,5 @@ int main()
     //   x=c<d?c:d;
     //   printf("smallest num %d",x);
     printf("smallest num %d\n", p);
-    printf("largest num %d", x);
+    printf("largest num %d", x); 
 }

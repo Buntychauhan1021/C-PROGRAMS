@@ -14,7 +14,4 @@ int fun(int x)
     else
      fun(x-1);
     printf("%d\t",x);
-
-   
-    
 }

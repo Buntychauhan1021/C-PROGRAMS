@@ -16,6 +16,5 @@ int fun(int x)
     {
         printf("%d\t",x);
         fun(x-1);
-        
     }
 }

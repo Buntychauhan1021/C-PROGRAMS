@@ -16,6 +16,5 @@ int fun(int x)
     {
         return x*fun(x-1);
     }
-    
-    
 }
+
